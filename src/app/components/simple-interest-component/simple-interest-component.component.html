@@ -1,7 +1,15 @@
 <h2>Simple Interest</h2>
 <h3>J = C * i * t</h3>
+<br>
 <div>
-  <input [(ngModel)]="money" />
-  * <input [(ngModel)]="tax" /> * <input [(ngModel)]="months" /> =
-  {{ getAmount() }}
+  <label for="money">Money: </label>
+  <input [(ngModel)]="money" id="money" /><br /><br />
+
+  <label for="money">Tax: </label>
+  <input [(ngModel)]="tax" /><br /><br />
+
+  <label for="money">Months: </label>
+  <input [(ngModel)]="months" /><br /><br />
+
+  <p>Juros: R${{ getAmount() }},00</p>
 </div>
