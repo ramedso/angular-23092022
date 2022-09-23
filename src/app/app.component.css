@@ -1,3 +1,12 @@
 p {
   font-family: Lato;
 }
+
+label {
+  padding-left: 10px;
+}
+
+div {
+  padding-left: 10px;
+  padding-top: 10px;
+}
