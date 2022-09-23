@@ -1,4 +1,30 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<form>
+  <div>
+    <input
+      type="radio"
+      id="simple"
+      name="rb"
+      (click)="changeSelection(true)"
+      checked
+    />
+    <label for="simple">Simple Interrest</label><br />
+
+    <input
+      type="radio"
+      id="compound"
+      name="rb"
+      (click)="changeSelection(false)"
+    />
+    <label for="compound">Compound Interrest</label>
+  </div>
+  <br />
+  <br />
+</form>
+
+<div *ngIf="isSelected">
+  <app-simple-interest-component></app-simple-interest-component>
+</div>
+
+<div *ngIf="!isSelected">
+  <app-compound-interest-component></app-compound-interest-component>
+</div>
