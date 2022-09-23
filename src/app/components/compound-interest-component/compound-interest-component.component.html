@@ -5,11 +5,11 @@
   <label for="money">Money: </label>
   <input [(ngModel)]="money" id="money" /><br /><br />
 
-  <label for="money">Tax: </label>
+  <label for="tax" id="tax">Tax: </label>
   <input [(ngModel)]="tax" /><br /><br />
 
-  <label for="money">Months: </label>
+  <label for="months">Months: </label>
   <input [(ngModel)]="months" /><br /><br />
 
-  <p>Juros: R${{ getAmount() }},00</p>
+  <p id="result" *ngIf="isEmpty()">Juros: R${{ getAmount() }},00</p>
 </div>

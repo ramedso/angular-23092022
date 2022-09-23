@@ -14,6 +14,14 @@ export class SimpleInterestComponentComponent implements OnInit {
     return Number(this.money) * Number(this.tax) * Number(this.months);
   }
 
+  isEmpty() {
+    if (this.money == '' || this.tax == '' || this.months == '') {
+      document.getElementById('result').innerHTML = '';
+    } else {
+      return this.getAmount();
+    }
+  }
+
   constructor() {}
 
   ngOnInit() {}
